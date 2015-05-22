@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <mytab>
+            <title>My Tab</title>
+            <sort_order>2</sort_order>
+            <action>adminhtml/mytab/index</action>
+        </mytab>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <mytab>
+                        <title>My Tab</title>
+                        <sort_order>2</sort_order>
+                    </mytab>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

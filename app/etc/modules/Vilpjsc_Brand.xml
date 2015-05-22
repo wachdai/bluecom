@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Vilpjsc_Brand>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Vilpjsc_Brand>
+    </modules>
+</config>

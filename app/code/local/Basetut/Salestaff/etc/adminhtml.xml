@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <mytab>
+            <title>Staff Manager</title>
+            <sort_order>1</sort_order>
+            <action>adminhtml/salesaffadmin/index</action>
+        </mytab>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <mytab>
+                        <title>Staff MAnager</title>
+                        <sort_order>1</sort_order>
+                    </mytab>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

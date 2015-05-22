@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Marvelcommerce_Mytab>
+            <version>0.1.0</version>
+        </Marvelcommerce_Mytab>
+    </modules>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <mytab>Marvelcommerce_Mytab_Index</mytab>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>

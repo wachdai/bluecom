@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Marvelcommerce_Mytab>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Marvelcommerce_Mytab>
+    </modules>
+</config>

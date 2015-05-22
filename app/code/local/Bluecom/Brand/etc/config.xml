@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+
+<config>
+    <modules>
+        <Bluecom_Brand>
+            <version>0.0.1</version>
+        </Bluecom_Brand>
+    </modules>
+
+    <global>
+        <models>
+            <bluecom_brand>
+                <resourceModel>bluecom_brand_resource</resourceModel>
+
+            </bluecom_brand>
+            <bluecom_brand_resource>
+                <entities>
+                    <brand>
+                        <table>bluecom_brand_brand</table>
+                    </brand>
+                </entities>
+            </bluecom_brand_resource>
+        </models>
+        <resources>
+            <bluecom_brand_setup>
+                <setup>
+                    <module>Bluecom_Brand</module>
+                    <class>Mage_Core_Model_Resource_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </bluecom_brand_setup>
+        </resources>
+    </global>
+</config>

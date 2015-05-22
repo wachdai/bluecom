@@ -1,0 +1,67 @@
+<div class="brand_logo_container">
+   <h3><?php echo $this->__('Featured Brands')  ?></h3>
+    <?php $i = 1;
+        foreach ($this->getFeaturedBrand() as $item): ?>
+            <div class="featured_brand <?php if ($i % 4 == 0)
+                echo 'no-margin' ?>">
+               <a href="<?php echo Mage::getBaseUrl() ?>brand/index/view/manufacturer/<?php echo $item['manufacturer_option_id'] ?>/?brandname=<?php echo $item['title'] ?>">
+                   <img src="<?php echo Mage::helper('brand')->getBrandImage($item, 'small') ?>"
+                        alt="<?php echo $item['title'] ?>"/>
+               </a>
+               <span>
+                   <strong><?php echo $item['title'] ?></strong>
+                   <h4><?php echo $item['content'] ?></h4>
+               </span>
+           </div>
+    <?php $i++;
+            endforeach; ?>
+        </div>
+
+        <div id="whole_most_prod">
+            <div class="most_prod_cont">
+                <div class="brand_block">
+                    <div class="navigation">
+                        <h3><?php echo Mage::helper("brand")->__("All Brands") ?></h3>
+                        <ul class="navigation_char"><?php echo $this->navigation() ?></ul>
+                    </div>
+                </div>
+                <div class="brand_list">
+                    <ul class="brand_normal">
+                <?php
+                $collection = $this->getBrandChar();
+                $noItem = $collection->count();
+                if ($noItem > 12)
+                    $column = 4;
+                elseif ($noItem <= 12 && $noItem > 8)
+                    $column = 2;
+                elseif ($noItem <= 8 && $noItem > 4)
+                    $column = 3;
+                else
+                    $column = 1;
+                $itemEachColumn = floor($noItem / $column);
+                $firstColumn = $itemEachColumn + $noItem % $column;
+                $itemCount = 1;
+                $column1 = '<div class="column1">';
+                $column2 = '<div class="column2">';
+                $column3 = '<div class="column3">';
+                $column4 = '<div class="column4">';
+                foreach ($collection as $brand):
+                    $item = '<li>
+                    <a href="' . Mage::getBaseUrl() . 'brand/index/view/manufacturer/' . $brand['option_id'] . '/?brandname=' . $brand['value'] . '">' . $brand['value'] . '</a>
+                </li>';
+                    if ($itemCount <= $firstColumn)
+                        $column1 .= $item;
+                    elseif ($itemCount <= ($firstColumn + $itemEachColumn) && $itemCount > $firstColumn)
+                        $column2 .=$item;
+                    elseif ($itemCount <= ($firstColumn + $itemEachColumn * 2) && $itemCount > $firstColumn + $itemColum)
+                        $column3 .=$item;
+                    else
+                        $column4 .=$item;
+                    $itemCount++;
+                endforeach;
+                echo $column1 . "</div>" . $column2 . "</div>" . $column3 . "</div>" . $column4 . "</div>";
+                ?>
+            </ul>
+        </div>
+    </div>
+</div>

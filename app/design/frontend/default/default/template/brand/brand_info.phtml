@@ -1,0 +1,25 @@
+<?php
+$item = $this->brandInfo();
+$breadcrumbs = $this->getLayout()->getBlock('breadcrumbs');
+
+$breadcrumbs->addCrumb('home', array('label' => Mage::helper('cms')->__('Home'), 'title' => Mage::helper('cms')->__('Home Page'), 'link' => Mage::getBaseUrl()));
+
+$breadcrumbs->addCrumb('country', array('label' => Mage::helper('brand')->__('All Brands'), 'title' => Mage::helper('brand')->__('All Brands'), 'link' => Mage::getBaseUrl() . 'brand/index'));
+
+$breadcrumbs->addCrumb('manufacturer', array('label' => preg_replace("/%20/", " ", Mage::app()->getRequest()->getParam('brandname')), 'title' => preg_replace("/%20/", " ", Mage::app()->getRequest()->getParam('brandname'))));
+
+echo $this->getLayout()->getBlock('breadcrumbs')->toHtml();
+if ($item != NULL) {
+    if ($item->getFilename()):
+?>
+        <div class="brand_info"><img src="<?php echo Mage::getBaseUrl() . "media/brand/" . $item->getFilename(); ?>" alt="<?php echo $item->getTitle() ?>">
+            <p><?php echo $item->getContent() ?></p>
+        </div>
+<?php
+        else:
+            echo "<div class='brand_info'><p>" . Mage::helper("brand")->__("Products of ") . $item->getValue() . "</p></div>";
+        endif;
+    }
+    else
+        echo "<div class='brand_info'>" . Mage::helper("brand")->__("Can not found this manufacturer id.") . "</div>"
+?>

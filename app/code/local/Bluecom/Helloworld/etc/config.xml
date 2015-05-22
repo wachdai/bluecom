@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Bluecom_Helloworld>
+            <version>0.1.0</version>
+        </Bluecom_Helloworld>
+    </modules>
+    <global>
+        <models>
+            <bluecom_helloworld>
+                <class>Bluecom_Helloworld_Model</class>
+                <resourceModel>bluecom_helloworld_resource</resourceModel>
+            </bluecom_helloworld>
+            <bluecom_helloworld_resource>
+                <class>Bluecom_Helloworld_Model_Resource</class>
+            </bluecom_helloworld_resource>
+        </models>
+        <blocks>
+            <bluecom_helloworld>
+                <class>Bluecom_Helloworld_Block</class>
+            </bluecom_helloworld>
+        </blocks>
+        <helpers>
+            <bluecom_helloworld>
+                <class>Bluecom_Helloworld_Helper</class>
+            </bluecom_helloworld>
+        </helpers>
+    </global>
+</config>
