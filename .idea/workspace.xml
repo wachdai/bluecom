@@ -62,7 +62,7 @@
       <file leaf-file-name="link.phtml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/smashingmagazine_brandexample/catalog/product/view/link.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="15" selection-start="442" selection-end="442" vertical-scroll-proportion="0.19753087" vertical-offset="0" max-vertical-offset="729">
+            <state line="8" column="12" selection-start="439" selection-end="439" vertical-scroll-proportion="0.19753087" vertical-offset="0" max-vertical-offset="729">
               <folding />
             </state>
           </provider>
@@ -1344,7 +1344,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/design/frontend/base/default/template/smashingmagazine_brandexample/catalog/product/view/link.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="15" selection-start="442" selection-end="442" vertical-scroll-proportion="0.19753087" vertical-offset="0" max-vertical-offset="729">
+        <state line="8" column="12" selection-start="439" selection-end="439" vertical-scroll-proportion="0.19753087" vertical-offset="0" max-vertical-offset="729">
           <folding />
         </state>
       </provider>
